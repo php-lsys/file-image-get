@@ -1,0 +1,24 @@
+{
+	"name" : "lsys/file-image-get",
+	"type" : "library",
+	"license" : "Apache-2.0",
+	"version" : "1.0.0",
+	"description" : "lsys module file image get",
+	"autoload" : {
+		"psr-4" : {
+			"LSYS\\" : "src/classes/LSYS/"
+		}
+	},
+	"require" : {
+		"lsys/file-get" : "~1.0.0",
+		"lsys/config" : "~1.0.0"
+	},
+	"require-dev" : {
+		"lsys/db-mysqli" : "~1.0.0",
+		"lsys/file-image-get-data-db" : "~1.0.0"
+	},
+	"suggest" : {
+		"lsys/file-image-get-data-db" : "~1.0.0",
+		"lsys/file-image-get-data--mongodb" : "~1.0.0"
+	}
+}
