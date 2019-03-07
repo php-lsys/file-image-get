@@ -20,7 +20,7 @@ LSYS\FileImageGet\DI::set(function (){
 });
 $fileimageget=LSYS\FileImageGet\DI::get()->fileimageget("test");
 $string="file/2018-09-03/5b8ce22f10c3c.png";//文件标识,存放到你的数据库
-var_dump($img->resize_url($string, "pic_10"));
+var_dump($img->resizeUrl($string, "pic_10"));
 var_dump($img->url($string));
 var_dump($img->urls($string));
 

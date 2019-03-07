@@ -16,8 +16,8 @@ class FileImageGet{
         if ($file===null)return $this->_config->get("not_found_url");
         return $file;
     }
-    public function resize_url($file,$resize){
-        $rfile=$this->_storage->resize_get($this->_file_get_config,$file,$resize);
+    public function resizeUrl($file,$resize){
+        $rfile=$this->_storage->resizeGet($this->_file_get_config,$file,$resize);
         if ($rfile) return $this->url($rfile);
         return $this->_config->get("resize_url").$resize.".".$file;
     }
@@ -25,7 +25,7 @@ class FileImageGet{
         $out=array($default=>$this->url($file));
         $resize=$this->_config->get("resize",[]);
         if(is_array($resize))foreach ($resize as $v){
-            $out[$v]=$this->resize_url($file, $v);
+            $out[$v]=$this->resizeUrl($file, $v);
         }
         return $out;
     }

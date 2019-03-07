@@ -1,7 +1,7 @@
 <?php
 namespace LSYS\FileImageGet;
 /**
- * @method \LSYS\FileImageGet fileimageget($config)
+ * @method \LSYS\FileImageGet fileImageGet($config)
  */
 class DI extends \LSYS\DI{
     /**
@@ -9,7 +9,7 @@ class DI extends \LSYS\DI{
      */
     public static function get(){
         $di=parent::get();
-        !isset($di->fileimageget)&&$di->fileimageget(new \LSYS\DI\VirtualCallback(\LSYS\FileImageGet::class));
+        !isset($di->fileImageGet)&&$di->fileImageGet(new \LSYS\DI\VirtualCallback(\LSYS\FileImageGet::class));
         return $di;
     }
 }
