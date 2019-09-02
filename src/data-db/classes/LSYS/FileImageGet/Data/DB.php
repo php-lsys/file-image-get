@@ -36,7 +36,7 @@ class DB implements Data{
         $file=$this->_db->quote($file);
         $resize=$this->_db->quote($resize);
         $sql="SELECT `resize_file` FROM `{$table}` WHERE `file`={$file} AND `resize`={$resize}";
-        $res=$this->_db->query(\LSYS\Database::DQL, $sql);
+        $res=$this->_db->query($sql);
         $file=$res->get("resize_file");
         if($this->_cache)$this->_cache->set($cache,$file,$this->_cache_time);
         return $file;
