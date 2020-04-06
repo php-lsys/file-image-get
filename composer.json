@@ -13,15 +13,15 @@
 		}
 	},
 	"require" : {
-		"lsys/file-get" : "~2.0.0",
-		"lsys/config" : "~2.0.0"
+		"lsys/file-get" : "~0.0.0",
+		"lsys/config" : "~0.0.0"
 	},
 	"require-dev" : {
-		"lsys/db" : "~2.0.0"
+		"lsys/db" : "~0.0.0"
 	},
 	"suggest" : {
-		"lsys/mongodb" : "~2.0.0",
-		"lsys/cache" : "~2.0.0",
-		"lsys/db" : "~2.0.0"
+		"lsys/mongodb" : "~0.0.0",
+		"lsys/cache" : "~0.0.0",
+		"lsys/db" : "~0.0.0"
 	}
 }
