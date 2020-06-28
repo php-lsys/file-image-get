@@ -16,7 +16,7 @@ class MongoDB implements Data{
         $monggodb=$monggodb?$monggodb:\LSYS\MongoDB\DI::get()->mongodb();
         $this->_db = $monggodb->getDatabase();
     }
-    public function resizeGet($file_get_config,$file,$resize){
+    public function resizeGet(string $file_get_config,string $file,string $resize):?string{
         $space=str_replace(".", '_',$file_get_config);
         $conn=$this->_db->selectCollection($space);
         $result = $conn->find([

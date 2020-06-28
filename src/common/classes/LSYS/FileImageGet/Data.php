@@ -1,5 +1,5 @@
 <?php
 namespace LSYS\FileImageGet;
 interface Data{
-    public function resizeGet($file_get_config,$file,$resize); 
+    public function resizeGet(string $file_get_config,string $file,string $resize):?string; 
 }

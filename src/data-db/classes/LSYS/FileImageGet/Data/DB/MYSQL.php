@@ -11,8 +11,8 @@ class MYSQL extends \LSYS\FileImageGet\Data\DB{
     protected function _tableName($file_get_config){
         if (!array_key_exists($file_get_config, $this->_check_cache)){
             $table=parent::_tableName($file_get_config);
-            $table=$this->_db->quote($table);
-            $row=$this->_db->query("SHOW TABLES LIKE {$table};");
+            $table=$this->_db->getConnect()->quote($table);
+            $row=$this->_db->getSlaveConnect()->query("SHOW TABLES LIKE {$table};");
             if (!$row->count()){
                 $this->_check_cache[$file_get_config]=null;
             }else{
